@@ -34,13 +34,42 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 <!DOCTYPE html>
 <html>
+<head>
+    <title>SocialNet - Sign In</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
 <body>
-    <h2>Sign In to SocialNet</h2>
-    <p style="color: red;"><?php echo $error; ?></p>
-    <form method="post">
-        Username: <input type="text" name="username" required><br><br>
-        Password: <input type="password" name="password" required><br><br>
-        <button type="submit">Sign In</button>
-    </form>
+    <?php include 'menu.php'; ?>
+
+    <div class="container">
+        <div style="text-align: center;">
+            <h2 style="color: #333;">Sign In to SocialNet</h2>
+            <p>Chào mừng cậu quay trở lại!</p>
+        </div>
+
+        <?php if ($error): ?>
+            <p class="error" style="background-color: #fce4e4; padding: 10px; border-radius: 4px; border: 1px solid #fccacb;">
+                <?php echo $error; ?>
+            </p>
+        <?php endif; ?>
+
+        <form method="post">
+            <label><b>Username</b></label>
+            <input type="text" name="username" placeholder="Enter Username" required>
+
+            <label><b>Password</b></label>
+            <input type="password" name="password" placeholder="Enter Password" required>
+
+            <button type="submit" style="width: 100%; margin-top: 10px;">Sign In</button>
+        </form>
+
+        <div style="margin-top: 20px; text-align: center;">
+            <hr>
+            <p>Don't have an account?</p>
+            <a href="../admin/newuser.php">
+                <button type="button" style="background-color: #2196F3; width: auto;">Create New User (Admin Page)</button>
+            </a>
+        </div>
+    </div>
 </body>
 </html>

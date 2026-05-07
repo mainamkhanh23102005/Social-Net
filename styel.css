@@ -1,0 +1,65 @@
+/* style.css */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    background-color: #f1f1f1;
+}
+
+/* Thanh Menu kiểu W3Schools */
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+    display: flex;
+    padding: 0 10px;
+}
+
+.navbar a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.navbar a:hover {
+    background-color: #04AA6D; /* Màu xanh đặc trưng W3Schools */
+    color: white;
+}
+
+/* Container cho nội dung */
+.container {
+    padding: 20px;
+    background-color: white;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 5px;
+}
+
+/* Form và Input xịn xò */
+input[type=text], input[type=password], textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #059862;
+}
+
+.error { color: red; margin-bottom: 10px; }
+.success { color: #04AA6D; margin-bottom: 10px; }
